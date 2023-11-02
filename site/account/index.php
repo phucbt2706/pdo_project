@@ -1,6 +1,6 @@
 <?php
-    require_once "../../dao/pdo.php";
-    require '../../global.php';
+    require "../../dao/pdo.php";
+    require "../../global.php";
     require "../../dao/khach-hang.php";
 
     extract($_REQUEST);
@@ -15,7 +15,6 @@
         $VIEW_NAME = 'register.php';
     }
     elseif (exist_param('log_out')) {
-
         $VIEW_NAME = 'logout.php';
     }
     elseif (exist_param('login')) {
