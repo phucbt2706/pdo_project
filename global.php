@@ -1,7 +1,7 @@
 <?php
     session_start();
     ob_start();
-    $ROOT_URL = "/learning.local";
+    $ROOT_URL = "/pdo_project";
     
     //Admin
     $ASSETS_URL = $ROOT_URL."/admin/assets";

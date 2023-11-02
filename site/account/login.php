@@ -13,7 +13,8 @@
                 $_SESSION['user']['name'] = $user['ten_kh'];
                 $_SESSION['user']['email'] = $user['email'];
                 $_SESSION['user']['role'] = $user['vai_tro'];
-                header('Location: /assignment/');
+                header('Location: ../shop/?check_out');
+                
             }else {
                 echo "<script>alert(\"Sai mật khẩu! \");</script>";
                 $VIEW_NAME = 'login-form.php';
