@@ -3,24 +3,23 @@
     ob_start();
     $ROOT_URL = "/learning.local";
     
-    //admin
+    //Admin
     $ASSETS_URL = $ROOT_URL."/admin/assets";
-    $ADMIN_URL = $ROOT_URL."/admin";
+    $ADMIN_URL  = $ROOT_URL."/admin";
     
-    //client
-    $CSS_URL = $ROOT_URL."/css";
-    $JS_URL = $ROOT_URL."/js";
-    $IMG_URL = $ROOT_URL."/img";
-    $SITE_URL = "$ROOT_URL/site";
-    $DAO_URL = $ROOT_URL."/dao";
+    //Client
+    $CSS_URL  = $ROOT_URL."/css";
+    $JS_URL   = $ROOT_URL."/js";
+    $IMG_URL  = $ROOT_URL."/img";
+    $SITE_URL = $ROOT_URL."/site";
+    $DAO_URL  = $ROOT_URL."/dao";
     
-    $CONTENT_URL = "$ROOT_URL/content";
-    $UPLOAD_URL = "$ROOT_URL/upload";
+    $CONTENT_URL = $ROOT_URL."/content";
+    $UPLOAD_URL  = $ROOT_URL."/upload";
 
     /*
     * Định nghĩa đường dẫn chứa ảnh sử dụng trong upload
     */
-    
     $IMAGE_DIR = $_SERVER["DOCUMENT_ROOT"] . "$ROOT_URL/content/images/";
    
     function show_array($data)
@@ -29,11 +28,12 @@
         print_r($data);
         echo '</pre>';
     }
+
     function currency_format($number){
         return number_format($number).'đ';
     }
+
     $VIEW_NAME = "index.php";
-    $MESSAGE = "";
 
     function exist_param($fieldname)
     {
@@ -80,10 +80,6 @@
     {
         return $_COOKIE[$name] ?? '';
     }
-
-    // function show_alert($message){
-    //     echo "<script>alert(".$message.");</script>";
-    // }
 
     function check_login(){
         global $ADMIN_URL;
