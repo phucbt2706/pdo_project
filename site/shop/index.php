@@ -45,9 +45,11 @@
         if (isset($_SESSION['user'])) {
             echo '<script>alert("Đã đặt hàng thành công")</script>';
             unset($_SESSION['cart']);
+            unset($_SESSION['check']);
 
             $VIEW_NAME = 'shop/shop.php';
         }else {
+            $_SESSION['check'] = "check";
             header('Location: ../account/');
         }
         $infor_product = hang_hoa_select_all();
